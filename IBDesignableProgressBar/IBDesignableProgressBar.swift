@@ -9,24 +9,24 @@
 import UIKit
 
 @IBDesignable
-class IBDesignableProgressBar: UIView {
+public class IBDesignableProgressBar: UIView {
   // Paddings
-  @IBInspectable var topPadding: CGFloat = 0
-  @IBInspectable var leftPadding: CGFloat = 0
-  @IBInspectable var rightPadding: CGFloat = 0
-  @IBInspectable var bottomPadding: CGFloat = 0
+  @IBInspectable public var topPadding: CGFloat = 0
+  @IBInspectable public var leftPadding: CGFloat = 0
+  @IBInspectable public var rightPadding: CGFloat = 0
+  @IBInspectable public var bottomPadding: CGFloat = 0
 
   // Frame
-  @IBInspectable var cornerRadius: CGFloat = 10
-  @IBInspectable var borderColor: UIColor = UIColor.blackColor()
-  @IBInspectable var borderWidth: CGFloat = 1
-  @IBInspectable var fillColor: UIColor = UIColor.whiteColor()
+  @IBInspectable public var cornerRadius: CGFloat = 10
+  @IBInspectable public var borderColor: UIColor = UIColor.blackColor()
+  @IBInspectable public var borderWidth: CGFloat = 1
+  @IBInspectable public var fillColor: UIColor = UIColor.whiteColor()
 
   // Bar
-  @IBInspectable var barColor: UIColor = UIColor.grayColor()
+  @IBInspectable public var barColor: UIColor = UIColor.grayColor()
 
   /// Value of progress bar in [0, 1] range.
-  @IBInspectable var value: CGFloat = 0 {
+  @IBInspectable public var value: CGFloat = 0 {
     didSet {
       if value < 0 {
         value = 0
@@ -37,15 +37,15 @@ class IBDesignableProgressBar: UIView {
   }
 
   private var frameLayer: CALayer = CALayer()
-  private lazy var barLayer: CALayer = CALayer()
+  private var barLayer: CALayer = CALayer()
 
   // MARK: Init
-  override init(frame: CGRect) {
+  public override init(frame: CGRect) {
     super.init(frame: frame)
     defaultInit()
   }
 
-  required init?(coder aDecoder: NSCoder) {
+  public required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
     defaultInit()
   }
@@ -56,7 +56,7 @@ class IBDesignableProgressBar: UIView {
   }
 
   // MARK: Layout
-  override func layoutSubviews() {
+  public override func layoutSubviews() {
     super.layoutSubviews()
 
     var rect = CGRect(

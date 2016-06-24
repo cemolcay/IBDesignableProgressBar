@@ -91,7 +91,7 @@ Create flat progress bars directly from storyboard.
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "IBDesignableProgressBar/IBDesignableProgressBar/IBDesignableProgressBar.swift"
+  s.source_files  = "IBDesignableProgressBar/IBDesignableProgressBar.swift"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

@@ -14,6 +14,7 @@
 		B2A942521D1CB19B000B54E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A942501D1CB19B000B54E9 /* LaunchScreen.storyboard */; };
 		B2A9425D1D1CB19B000B54E9 /* IBDesignableProgressBarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A9425C1D1CB19B000B54E9 /* IBDesignableProgressBarTests.swift */; };
 		B2A942681D1CB19B000B54E9 /* IBDesignableProgressBarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A942671D1CB19B000B54E9 /* IBDesignableProgressBarUITests.swift */; };
+		B2A942761D1CB1AD000B54E9 /* IBDesignableProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A942751D1CB1AD000B54E9 /* IBDesignableProgressBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B2A942631D1CB19B000B54E9 /* IBDesignableProgressBarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IBDesignableProgressBarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2A942671D1CB19B000B54E9 /* IBDesignableProgressBarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBDesignableProgressBarUITests.swift; sourceTree = "<group>"; };
 		B2A942691D1CB19B000B54E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2A942751D1CB1AD000B54E9 /* IBDesignableProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBDesignableProgressBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				B2A9424E1D1CB19B000B54E9 /* Assets.xcassets */,
 				B2A942501D1CB19B000B54E9 /* LaunchScreen.storyboard */,
 				B2A942531D1CB19B000B54E9 /* Info.plist */,
+				B2A942751D1CB1AD000B54E9 /* IBDesignableProgressBar.swift */,
 			);
 			path = IBDesignableProgressBar;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2A9424A1D1CB19B000B54E9 /* ViewController.swift in Sources */,
+				B2A942761D1CB1AD000B54E9 /* IBDesignableProgressBar.swift in Sources */,
 				B2A942481D1CB19B000B54E9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

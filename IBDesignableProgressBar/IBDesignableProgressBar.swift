@@ -9,24 +9,24 @@
 import UIKit
 
 @IBDesignable
-public class IBDesignableProgressBar: UIView {
+open class IBDesignableProgressBar: UIView {
   // Paddings
-  @IBInspectable public var topPadding: CGFloat = 0
-  @IBInspectable public var leftPadding: CGFloat = 0
-  @IBInspectable public var rightPadding: CGFloat = 0
-  @IBInspectable public var bottomPadding: CGFloat = 0
+  @IBInspectable open var topPadding: CGFloat = 0
+  @IBInspectable open var leftPadding: CGFloat = 0
+  @IBInspectable open var rightPadding: CGFloat = 0
+  @IBInspectable open var bottomPadding: CGFloat = 0
 
   // Frame
-  @IBInspectable public var cornerRadius: CGFloat = 10
-  @IBInspectable public var borderColor: UIColor = UIColor.blackColor()
-  @IBInspectable public var borderWidth: CGFloat = 1
-  @IBInspectable public var fillColor: UIColor = UIColor.whiteColor()
+  @IBInspectable open var cornerRadius: CGFloat = 10
+  @IBInspectable open var borderColor: UIColor = UIColor.black
+  @IBInspectable open var borderWidth: CGFloat = 1
+  @IBInspectable open var fillColor: UIColor = UIColor.white
 
   // Bar
-  @IBInspectable public var barColor: UIColor = UIColor.grayColor()
+  @IBInspectable open var barColor: UIColor = UIColor.gray
 
   /// Value of progress bar in [0, 1] range.
-  @IBInspectable public var value: CGFloat = 0 {
+  @IBInspectable open var value: CGFloat = 0 {
     didSet {
       if value < 0 {
         value = 0
@@ -36,8 +36,8 @@ public class IBDesignableProgressBar: UIView {
     }
   }
 
-  private var frameLayer: CALayer = CALayer()
-  private var barLayer: CALayer = CALayer()
+  fileprivate var frameLayer: CALayer = CALayer()
+  fileprivate var barLayer: CALayer = CALayer()
 
   // MARK: Init
   public override init(frame: CGRect) {
@@ -50,13 +50,13 @@ public class IBDesignableProgressBar: UIView {
     defaultInit()
   }
 
-  private func defaultInit() {
+  fileprivate func defaultInit() {
     layer.addSublayer(frameLayer)
     frameLayer.addSublayer(barLayer)
   }
 
   // MARK: Layout
-  public override func layoutSubviews() {
+  open override func layoutSubviews() {
     super.layoutSubviews()
 
     var rect = CGRect(
@@ -68,8 +68,8 @@ public class IBDesignableProgressBar: UIView {
     // Frame
     frameLayer.frame = rect
     frameLayer.cornerRadius = cornerRadius
-    frameLayer.backgroundColor = fillColor.CGColor
-    frameLayer.borderColor = borderColor.CGColor
+    frameLayer.backgroundColor = fillColor.cgColor
+    frameLayer.borderColor = borderColor.cgColor
     frameLayer.borderWidth = borderWidth
     frameLayer.masksToBounds = true
 
@@ -77,6 +77,6 @@ public class IBDesignableProgressBar: UIView {
     rect.origin = CGPoint.zero
     rect.size.width = rect.size.width * value
     barLayer.frame = rect
-    barLayer.backgroundColor = barColor.CGColor
+    barLayer.backgroundColor = barColor.cgColor
   }
 }
